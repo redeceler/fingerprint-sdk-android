@@ -1,36 +1,35 @@
 # SDK Android fingerPrint
+### Getting started
 
-## Dependency 
-
-First add it in your root build.gradle at the end of repositories:
-
-`
+1. First add it in your root build.gradle at the end of repositories:
+```java
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
-`
+}
+```
 
-Add the dependency
-
-`
+2. Add the dependency on the app build.gradle
+```java
 dependencies {
-	        implementation 'com.github.redeceler:fingerprint-sdk-android:Tag'
-	}
-`
+	implementation 'com.github.redeceler:fingerprint-sdk-android:1.0.2'
+}
+```
 
-After that, add the .aar dependency located in sdkfingerprint/libs in your lib folder.
+3. add the .aar dependency located in sdkfingerprint/libs in your lib folder.
+```java
+sdkfingerprint/libs/finger-print.arr
+// copy this file to your libs folder
+```
 
+### Usage
+Is very simple to call this library, just do it.
 
-## How to call
-
-Is very simple to call this library: 
-
-`
- new Fingerprint().generateFingerprint(this, false,  sessionId -> {
+```java
+new Fingerprint().generateFingerprint(this, false, sessionId -> {
     Log.e("SESSION ID", sessionId);
 }     
-`
+```
 
