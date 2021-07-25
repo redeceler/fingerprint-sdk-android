@@ -18,7 +18,7 @@ public class Fingerprint {
     private Callback callback;
     private String fingerPrint;
 
-    public void generateFingerprint(final Context context, final Boolean isRelease) {
+    public void configSDK(final Context context, final Boolean isRelease) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -43,7 +43,7 @@ public class Fingerprint {
 
     public void generateFingerprint(Context context, final Boolean isRelease, Callback callback) {
         this.callback = callback;
-        generateFingerprint(context, isRelease);
+        configSDK(context, isRelease);
     }
 
     class Complete implements EndNotifier {
