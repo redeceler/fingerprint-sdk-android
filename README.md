@@ -30,7 +30,7 @@ Is very simple to call this library:
 
 `
  new Fingerprint().generateFingerprint(this, false,  sessionId -> {
-            Log.e("SESSION ID", sessionId);
-        }     
+    Log.e("SESSION ID", sessionId);
+}     
 `
 
