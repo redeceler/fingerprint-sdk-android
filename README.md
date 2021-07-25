@@ -29,7 +29,7 @@ After that, add the .aar dependency located in sdkfingerprint/libs in your lib f
 Is very simple to call this library: 
 
 `
-Fingerprint().generateFingerprint(this, false) {id->
+new Fingerprint().generateFingerprint(this, false) {id->
             Log.e("TAG", "Id do fingerPrint")
         }        
 `
